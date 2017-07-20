@@ -2,13 +2,13 @@ module.exports = {
 
   attributes: {
 
-  			IdOrganizacion:{
+  			IdRequisitoFuncional:{
   				type:'integer',
   				unique:true,
   				primaryKey:true
 
   			},
-            NombreOrganizacion: {
+            NombreRequisitoFuncional: {
               type: 'string',
               size 25,
               required: true
@@ -16,30 +16,33 @@ module.exports = {
            Autores: {
              model:'participante'
             },
-            Fuentes: {
+            Fuentes:{
+
+            },
+            Version:{
+
+            },
+            Importancia: {
               model
             },
-            version:{
-              
-            },
-            ParticipantesAsociados:{
+            Urgencia:{
+
+            }, 
+            EstadoDeDesarrollo:{
+
+            },Estabilidad:{
 
             },
-            Direccion:{
+            Destino:{
 
             },
-            Telefono:{
-
-            },
-            email:{
+            Origen:{
 
             },
            Comentarios: {
               type: 'string'
             },
-            objetivo:{
-
-            },
+            
             fecha:{
 
             },

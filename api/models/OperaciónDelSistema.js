@@ -32,7 +32,7 @@ module.exports = {
               
             },
            Comentarios: {
-              type: 'string'
+              type: 'text'
             },
             objetivo:{
 

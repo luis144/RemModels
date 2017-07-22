@@ -2,55 +2,62 @@ module.exports = {
 
   attributes: {
 
-  			IdAsociacion:{
-  				type:'integer',
-  				unique:true,
-  				primaryKey:true
-
-  			},
+  			
             NombreAsociacion: {
               type: 'string',
-              size 25,
-              required: true
+              size: 25,
+              required: true,
+              unique:true,
+              primarykey:trues
+
             },
            Autores: {
-             model:'participante'
+             collection:'Participante',
+             via:'NombreParticipante'
             },
             Fuentes: {
-              model
+              collection:'Participante',
+             via:'NombreParticipante'
             },
             version:{
-              
+              type:'float',
+              required:true
             },
             TipoDeAsociacion:{
+              type:'string',
+              required:true
 
             },
             Origen:{
-
+              type:'string',
+              required:true
             },
             Destino:{
-              
+            type:'string',
+            required:true              
             },
            Comentarios: {
               type: 'string'
             },
-            objetivo:{
-
-            },
+            
             fecha:{
-
+              type:'date',
+              required:true
             },
             Hora:{
-
+              type:'datetime',
+              required:true
             },
             Descripcion:{
+              type:'text'
 
             },
             fechaHistoria:{
-
+              type:'date'
+              required
             },
             DescripcionHistoria:{
-            	
+            	type:'text'
             }
 
 };

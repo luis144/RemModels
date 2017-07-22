@@ -14,31 +14,40 @@ module.exports = {
               required: true
             },
            Autores: {
-             model:'participante'
+             collection:'Participante',
+             via:'NombreParticipante'
             },
             Fuentes: {
-              model
+              collection:'Participante',
+             via:'NombreParticipante'
             },
             version:{
-              
+              type:'float',
+              required:true              
             },
             Solucion:{
+              type:'text',
 
             },
             Importancia:{
+              type:'text',
+              required:true
 
             },
             Urgencia:{
+              type:'text',
+              required:true
 
             },
             EstadoDeDesarrollo:{
-
+              type:'text',
+              required
             },
            Comentarios: {
               type: 'string'
             },
             ObjetosAfectadosDirectamente:{
-
+              
             },
             ObjetosAfectadosIndirectamente:{
               

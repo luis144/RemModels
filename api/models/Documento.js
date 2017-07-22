@@ -8,45 +8,50 @@
 module.exports = {
 
   attributes: {
+  	autoCreatedAt:false,
+  	autoUpdatedAt:false,
 
-  			IdDocumento:{
-  				type:'integer',
-  				unique:true,
-  				primaryKey:true
-
-  			},
+  			
             NombreDocumento: {
               type: 'string',
+              unique:true,
+              primaryKey:true,
               size 25,
               required: true
             },
            Autores: {
              model:'participante'
             },
+            Fuentes:{
+            	model:'participante'
+            },
             NombreOrganizacion: {
-              model
+            	collection:'Organizacion'
+            	via:'NombreOrganizacion',
             },
            Comentarios: {
               type: 'string'
             },
-            objetivo:{
-
-            },
+            
             fecha:{
-
+            	type:'date',
+            	required:true
             },
             Hora:{
+            	type:'datetime',
+            	required:true
 
             },
             Descripcion:{
+            	type:'text',
 
             },
             fechaHistoria:{
-
+            	type:'datetime',
+            	required:true
             },
             DescripcionHistoria:{
-            	
+            	type:'text'
             }
 
 };
-

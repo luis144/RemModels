@@ -2,50 +2,55 @@ module.exports = {
 
   attributes: {
 
-  			IdActor:{
-  				type:'integer',
-  				unique:true,
-  				primaryKey:true
-
-  			},
+  			
             NombreActor: {
               type: 'string',
               size 25,
-              required: true
+              unique:true,
+              primaryKey:true
+
             },
            Autores: {
-             model:'participante'
+            collection:'Participante',
+             via:'NombreParticipante'
             },
             Fuentes: {
-              model
+              collection:'Participante',
+             via:'NombreParticipante'
             },
             version:{
+              type:'float'
               
             },
             Origen:{
-
+              type:'string',
+              required:true
             },
             Destino:{
-              
+              type:'string',
+              required:true              
             },
            Comentarios: {
-              type: 'string'
+              type: 'text'
             },
            
             fecha:{
-
+              type:'date',
+              required:true
             },
             Hora:{
-
+              type:'datetime',
+              required:true
             },
             Descripcion:{
-
+              type:'text'
             },
             fechaHistoria:{
-
+              type:'date',
+              required:true
             },
             DescripcionHistoria:{
-            	
+            	type:'text',
             }
 
 };

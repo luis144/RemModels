@@ -54,7 +54,7 @@ module.exports = {
              Documento: {
             collection:'Documento',
              via:'NombreDocumento'
-            },
+            }
 
 };
 

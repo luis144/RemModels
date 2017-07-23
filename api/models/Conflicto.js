@@ -10,8 +10,10 @@ module.exports = {
   			},
             NombreConflicto: {
               type: 'string',
-              size 25,
-              required: true
+              size: 25,
+              required: true,
+              unique:true,
+              primaryKey:true
             },
            Autores: {
              collection:'Participante',
@@ -47,26 +49,33 @@ module.exports = {
               type: 'string'
             },
             ObjetosAfectadosDirectamente:{
-              
+              type:'string',
+              size:40
             },
             ObjetosAfectadosIndirectamente:{
-              
+              type:'string',
+              size:40
             },
 
             fecha:{
-
+              type:'date',
+              required:true
             },
             Hora:{
-
+              type:'datetime'
             },
             Descripcion:{
-
+              type:'text'
             },
             fechaHistoria:{
-
+              type:'date'
             },
             DescripcionHistoria:{
-            	
+            	type:'text'
+            },
+             Documento: {
+            collection:'Documento',
+             via:'NombreDocumento'
             }
 
 };

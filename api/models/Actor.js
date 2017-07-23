@@ -5,7 +5,7 @@ module.exports = {
   			
             NombreActor: {
               type: 'string',
-              size 25,
+              size: 25,
               unique:true,
               primaryKey:true
 
@@ -50,7 +50,11 @@ module.exports = {
               required:true
             },
             DescripcionHistoria:{
-            	type:'text',
+            	type:'text'
+            },
+             Documento: {
+            collection:'Documento',
+             via:'NombreDocumento'
             }
 
 };

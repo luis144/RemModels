@@ -2,15 +2,9 @@ module.exports = {
 
   attributes: {
 
-  			IdOrganizacion:{
-  				type:'integer',
-  				unique:true,
-  				primaryKey:true
-
-  			},
             NombreOrganizacion: {
               type: 'string',
-              size 25,
+              size: 25,
               required: true
               unique:true,
               primaryKey:true
@@ -64,6 +58,10 @@ module.exports = {
             },
             DescripcionHistoria:{
             	type:'text'
+            },
+             Documento: {
+            collection:'Documento',
+             via:'NombreDocumento'
             }
 
 };

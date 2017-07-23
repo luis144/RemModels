@@ -61,5 +61,9 @@ module.exports = {
             },
             DescripcionHistoria:{
             	type:'text',
+            },
+             Documento: {
+            collection:'Documento',
+             via:'NombreDocumento'
             }
 };

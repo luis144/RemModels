@@ -2,61 +2,74 @@ module.exports = {
 
   attributes: {
 
-  			IdRequisitoFuncional:{
-  				type:'integer',
-  				unique:true,
-  				primaryKey:true
-
-  			},
+  			
             NombreRequisitoFuncional: {
               type: 'string',
-              size 25,
-              required: true
+              size: 25,
+              required: true,
+              unique:true,
+              primaryKey:true
             },
            Autores: {
-             model:'participante'
+             collection:'Participante',
+             via:'NombreParticipante'
             },
             Fuentes:{
-
+              collection:'Participante',
+             via:'NombreParticipante'
             },
             Version:{
 
             },
             Importancia: {
-              model
+              type:'string',
+              size:40     
             },
             Urgencia:{
-
+              type:'string',
+              size:40     
             }, 
             EstadoDeDesarrollo:{
+              type:'string',
+              size:40     
 
-            },Estabilidad:{
-
+            },
+            Estabilidad:{
+              type:'string',
+              size:40     
             },
             Destino:{
-
+              type:'string',
+              size:40     
             },
             Origen:{
-
+              type:'string',
+              size:40     
             },
            Comentarios: {
-              type: 'string'
+              type: 'text'
             },
-            
             fecha:{
-
+              type:'date'
+              required:true
             },
             Hora:{
-
+              type:'datetime'
+              required:true
             },
             Descripcion:{
-
+              type:'text'
             },
             fechaHistoria:{
-
+              type:'date',
+              required:true
             },
             DescripcionHistoria:{
-            	
+              type:'text'
+            },
+             Documento: {
+            collection:'Documento',
+             via:'NombreDocumento'
             }
 
 };

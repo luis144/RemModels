@@ -16,18 +16,20 @@ module.exports = {
               type: 'string',
               unique:true,
               primaryKey:true,
-              size 25,
+              size: 25,
               required: true
             },
            Autores: {
-             model:'participante'
+            collection:'Participante',
+             via:'NombreParticipante'
             },
             Fuentes:{
-            	model:'participante'
+            collection:'Participante',
+             via:'NombreParticipante'
             },
             NombreOrganizacion: {
-            	collection:'Organizacion'
-            	via:'NombreOrganizacion',
+            	collection:'Organizacion',
+             via:'NombreOrganizacion'
             },
            Comentarios: {
               type: 'string'

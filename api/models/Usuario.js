@@ -2,25 +2,26 @@ module.exports = {
 
   attributes: {
 
-  			IdUsuario:{
-  				type:'integer',
-  				unique:true,
-  				primaryKey:true
-
-  			},
+  			
             NombreUsuario: {
               type: 'string',
-              size 25,
-              required: true
+              size: 25,
+              required: true,
+              unique:true,
+              primaryKey:true
             },
            Password: {
              model:'participante'
             },
             NumeroDeIntegrantes: {
-              model
+              type:'integer'
             },
            Rol: {
               type: 'string'
+            },
+             Documento: {
+            collection:'Documento',
+             via:'NombreDocumento'
             }
 
 };

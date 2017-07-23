@@ -2,7 +2,7 @@ module.exports = {
 
   attributes: {
 
-  			},
+  			
             NombreDeCasoDeUso: {
               type: 'string',
               size:25,
@@ -87,6 +87,10 @@ module.exports = {
             DescripcionHistoria:{
             type:'date'
             required:true          	
+            },
+             Documento: {
+            collection:'Documento',
+             via:'NombreDocumento'
             }
 
 };

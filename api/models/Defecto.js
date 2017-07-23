@@ -2,64 +2,78 @@ module.exports = {
 
   attributes: {
 
-  			IdDefecto:{
-  				type:'integer',
-  				unique:true,
-  				primaryKey:true
-
-  			},
+  			
             NombreDefecto: {
               type: 'string',
-              size 25,
-              required: true
+              size: 25,
+              required: true,
+              unique: true,
+              primaryKey:true
             },
            Autores: {
-             model:'participante'
+             collection:'Participante',
+             via:'NombreParticipante'
             },
             Fuentes: {
-              model
+              collection:'Participante',
+             via:'NombreParticipante'
             },
             version:{
-              
+              type:'float'
+              required:true              
             },
             TipoDeDefecto:{
-
+              type:'string',
+              size:30
             },
+
             Solucion:{
-
+              type:'text'
             },
-            Importancia:{
 
+            Importancia:{
+            type:'string',
+            size:35
             },
             Urgencia:{
-
+              type:'string',
+              size:35
             },
             ObjetosAfectadosIndirectamente:{
+            type:'string',
+            size:40
             },
 
             ObjetosAfectadosDirectamente:{
+            type:'string',
+            size:40
             }, 
               
            Comentarios: {
-              type: 'string'
+              type: 'string',
+              size:35
             },
             Estado:{
-
+              type:'string'
             },
             fecha:{
-
+              type:'date'
             },
             Hora:{
-
+              type:'datetime'
             },
             Descripcion:{
-
+              type:'text'
             },
             fechaHistoria:{
-
+              type:'date'
             },
             DescripcionHistoria:{
-            	
+            	type:'text'
+            },
+             Documento: {
+            collection:'Documento',
+             via:'NombreDocumento'
             }
 
 };

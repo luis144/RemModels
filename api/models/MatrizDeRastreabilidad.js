@@ -2,27 +2,34 @@ module.exports = {
 
   attributes: {
 
-  			IdMatriDeRastreabilidad:{
-  				type:'integer',
-  				unique:true,
-  				primaryKey:true
-
-  			},
+  			
             NombreMatrizDeRastreabilidad: {
               type: 'string',
-              size 25,
-              required: true
-            },
+              size: 25,
+              required: true,
+              unique:true,
+              primaryKey:true
+              },
            Autores: {
-             model:'participante'
+             collection:'Participante',
+             via:'NombreParticipante'
             },
             Fuentes: {
-              model
+             collection:'Participante',
+             via:'NombreParticipante'
             },
             version:{
               
             },
             FilasDeLaMatriz:{
+
+            collection:'Documento',
+             via:'NombreDocumento'
+            
+            collection:'Documento',
+             via:'NombreDocumento'
+            
+
 
             },
             ColumnasDeLaMatriz:{
@@ -30,23 +37,30 @@ module.exports = {
             },
             
            Comentarios: {
-              type: 'string'
+              type: 'text'
             },
             
             fecha:{
-
+              type:'date',
+              required:true
             },
             Hora:{
-
+            type:'datetime',
+            required:true
             },
             Descripcion:{
-
+              type:'text'
             },
             fechaHistoria:{
-
+              type:'date',
+              required:true
             },
             DescripcionHistoria:{
-            	
+            	type:'text',
+            },
+             Documento: {
+            collection:'Documento',
+             via:'NombreDocumento'
             }
 
 };
